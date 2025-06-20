@@ -1,0 +1,178 @@
+:root {
+  /* Colors */
+
+  /* Primary */
+
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+
+  /* Neutral */
+
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+
+  /* Weights */
+  --Weights-5: 500;
+  --Weights-7: 700;
+  --Weights-9: 900;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: var(--Pale-blue);
+  font-family: "Red Hat Display", sans-serif;
+  position: relative;
+}
+
+/* Pattern Background Section */
+.order-background {
+  width: 100vw;
+  height: 70%;
+  bottom: 25rem;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(./images/pattern-background-desktop.svg);
+  z-index: 1;
+}
+
+/* Order Component Section */
+.order-card {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.5rem;
+  background-color: white;
+  overflow: auto;
+  z-index: 2;
+}
+
+.order-content {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  gap: 1.25rem;
+  padding: 2rem 0;
+}
+
+.order-title {
+  width: fit-content;
+  font-size: 2rem;
+  color: var(--Dark-blue);
+  font-weight: var(--Weights-9);
+}
+
+.order-body {
+  width: 60%;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.5rem;
+  color: var(--Desaturated-blue);
+  font-weight: var(--Weights-5);
+}
+
+/* Annual Section */
+.annual-container {
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background-color: var(--Very-pale-blue);
+}
+
+/* Annual content */
+.annual-content {
+  display: flex;
+  column-gap: 1rem;
+  align-items: center;
+}
+
+/* text link */
+.txt-link {
+  font-size: 1rem;
+  font-weight: var(--Weights-7);
+  color: var(--Bright-blue);
+}
+
+.txt-link:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: hsl(245, 81%, 70%);
+}
+
+.annual-txt {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.25rem;
+}
+
+.annual-title {
+  color: var(--Dark-blue);
+  font-size: 1rem;
+  font-weight: var(--Weights-9);
+}
+
+.annual-amount {
+  font-size: 1rem;
+  font-weight: var(--Weights-7);
+  color: var(--Desaturated-blue);
+}
+
+/* Button Section */
+.btn {
+  width: 75%;
+  outline: none;
+  border: none;
+  color: white;
+  padding: 1rem 0;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  border-radius: 1rem;
+  font-weight: var(--Weights-5);
+  background-color: var(--Bright-blue);
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: hsl(245, 81%, 70%);
+}
+
+.cancel-btn {
+  width: fit-content;
+  text-decoration: none;
+  font-weight: var(--Weights-9);
+  color: var(--Desaturated-blue);
+}
+
+.cancel-btn:hover {
+  cursor: pointer;
+  color: var(--Dark-blue);
+}
+
+/* /////////////// Mobile View /////////////// */
+
+@media (max-width: 480px) {
+  /* Pattern Background Section */
+  .order-background {
+    background-image: url(./images/pattern-background-mobile.svg);
+  }
+
+  /* Margin adjustment for the main Order Card */
+  .order-card {
+    margin: 0 8rem;
+  }
+}
