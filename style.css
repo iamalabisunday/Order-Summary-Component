@@ -138,12 +138,14 @@ body {
   outline: none;
   border: none;
   color: white;
-  padding: 1rem 0;
+  padding: 1.2rem 0;
   font-size: 1rem;
   margin-top: 0.5rem;
   border-radius: 1rem;
   font-weight: var(--Weights-5);
   background-color: var(--Bright-blue);
+  /* box-shadow: 5px 5px 20px hsl(245, 75%, 78%); */
+  box-shadow: 6px 8px 10px var(--Pale-blue);
 }
 
 .btn:hover {
@@ -152,6 +154,7 @@ body {
 }
 
 .cancel-btn {
+  margin-top: 1rem;
   width: fit-content;
   text-decoration: none;
   font-weight: var(--Weights-9);
